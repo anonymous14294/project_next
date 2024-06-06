@@ -1,0 +1,59 @@
+---
+title: Question8
+description: A customer is creating a site and would like their project not to be indexed by search engines. Please write a reply to the customer. Feel free to add any information about your decision making process after the reply
+date: "2024-06-06"
+---
+
+## Response
+
+Hi There,
+
+Thank you for reaching out. 
+
+If you’d like to prevent your site from being indexed by search engines, you can achieve this by adding a `robots.txt` file to your project. Here’s how you can do it:
+
+
+#### Steps to Prevent Search Engine Indexing:
+
+1. Create a robots.txt file in the root directory of your project.
+    Add the following lines to the `robots.txt` file:
+    ``` html
+        User-agent: *
+        Disallow: /
+    ```
+
+2. This will instruct all search engine crawlers to avoid indexing any pages of your site.
+3. Deploy the changes to your Vercel project.
+
+
+Additionally, if you want to ensure that individual pages are not indexed, you can add a `<meta>` tag to the `<head>` section of each HTML page:
+
+`<meta name="robots" content="noindex">`
+
+#### Implementing the robots.txt File:
+
+1. Log in to your Vercel account and navigate to your project.
+2. In your project directory, create a new file named robots.txt.
+3. Add the lines mentioned above to the file and save it.
+4. Deploy your project to apply the changes.
+
+
+#### Verifying the Setup:
+
+Once deployed, you can verify that the robots.txt file is accessible by visiting `https://example.com/robots.txt`.
+You can also use tools like Google Search Console to check if your site is being indexed.
+
+If you have any further questions or need additional assistance with this process, please feel free to reach out. I'm here to help!
+
+Best regards
+
+Abhishek
+
+## Decision-Making Process:
+
+1. **Understanding Customer Needs:** The customer wants to prevent their site from being indexed by search engines, which requires modifying the site's configuration.
+2. **Providing Clear Instructions:** Detailed steps for creating and implementing a `robots.txt` file ensure the customer can follow the process easily.
+3. **Offering Additional Options:** Mentioning the `<meta>` tag provides an alternative method for more granular control over indexing.
+4. **Verification and Support:** Including steps for verifying the changes and offering further assistance reassures the customer that support is available if needed.
+
+By providing clear, actionable steps and additional resources, the response aims to empower the customer to achieve their goal while ensuring they feel supported throughout the process.

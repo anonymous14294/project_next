@@ -1,0 +1,39 @@
+---
+title: Question3
+description: Describe how you solved a challenge or technical issue that you faced in a previous role (preferably in a previous support role). How did you determine that your solution was successful?
+date: "2024-06-06"
+---
+
+In my previous role as a senior technical account manager at Razorpay, I faced a significant issue where customers were not receiving email notifications when payment links were generated. This problem was causing delays in transactions and frustration among our customers, as they were not being identified and informed promptly.
+
+
+### Issue Identification
+
+I started by reviewing the support tickets related to this issue and gathering detailed information from the affected customers. It became clear that the problem was consistent and widespread, occurring every time a payment link was generated. I collaborated with our development and operations teams to investigate the backend processes involved in sending these emails.
+
+###Issue Debugging
+
+We identified that the emails were being queued but not sent due to a timeout issue with our SMTP partner's server. This was identified during the log-checking process for the third-party tool’s API requests and responses. This was causing the emails to remain in the queue without being delivered where most of them were returning a response of 503 - server busy. We also discovered that this issue was intermittent, making it challenging to pinpoint initially.
+
+### Setting up war room for solutions
+
+To address the problem, we quickly organized a war room with our SMTP partner to diagnose the root cause in real time. Through close collaboration, we identified that the server timeouts were due to high-traffic periods that our SMTP partner had not accounted for.
+
+### Deploying the Fix
+
+We worked together to implement a fix that involved optimizing our email queuing system and increasing the timeout limits temporarily to prevent emails from getting stuck. Additionally, our SMTP partner scaled their resources to handle the increased load more efficiently.
+
+### Verifying the Solution
+
+Post-implementation, we closely monitored the email delivery process to ensure the fix was effective. I communicated with the affected customers to confirm that they were receiving payment link emails promptly. We also set up additional monitoring to track email delivery times and success rates.
+
+#### Determining Success: The success of the solution was measured through several key indicators:
+
+1. Customer Feedback: Customers reported that they were receiving payment link emails without any delays, and their transactional processes were back to normal.
+
+2. System Metrics: Monitoring tools showed a 100% success rate in email deliveries post-fix, with no further timeout issues.
+
+3. Support Ticket Analysis: There was a significant drop in support tickets related to email notifications, indicating the issue had been resolved.
+
+
+This experience highlighted the importance of rapid response, effective cross-team collaboration, and proactive communication with both partners and customers. It also reinforced the value of real-time problem-solving to address critical issues efficiently.
